@@ -49,7 +49,7 @@ http://localhost:8080/index.html
  <sub><b>Aluizio Junior</b></sub></a> 🚀 </a>  <br /><br />
 
  
-[![Linkedin Badge](https://img.shields.io/badge/-Filemom-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/aluizio-antonio/)](https://www.linkedin.com/in/aluizio-antonio/) 
+[![Linkedin Badge](https://img.shields.io/badge/-Aluizio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/aluizio-antonio/)](https://www.linkedin.com/in/aluizio-antonio/) 
 [![Gmail Badge](https://img.shields.io/badge/-aluizioantoniojr@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:aluizioantoniojr@gmail.com)](mailto:aluizioantoniojr@gmail.com
 )
 
