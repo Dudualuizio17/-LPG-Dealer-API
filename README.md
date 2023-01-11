@@ -33,18 +33,17 @@ Abrir o PHPmyadmin criar o banco de dados ***beteldb***
 Importar o arquivo beteldb.sql na pasta **Assets**
 
 **Configuração da API**
+
 Execute o comando a seguir no seu terminal na pasta **LPG-Dealer-API**:
 
 ```bash
 # Instalar as dependências
 npm install
 ```
-
 ```bash
 # Inicie a aplicação na porta 8080
 npm start
 ```
-
 Abra a seguinte URL em seu navegador:
 ```bash
 http://localhost:8080/index.html 
