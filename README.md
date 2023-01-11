@@ -1,4 +1,4 @@
-# -LPG-Dealer-API
+# LPG-Dealer-API
 
 <p align="center">
   <a href="#">
