@@ -28,9 +28,18 @@ Execute o seguinte comando no seu terminal:
 # Download da aplicação diretamento do repositório
 git clone https://github.com/Dudualuizio17/-LPG-Dealer-API.git
 ```
+Iniciar o APACHE
+Abrir o PHPmyadmin criar o banco de dados ***beteldb***
+Importar o arquivo beteldb.sql na pasta **Assets**
 
 **Configuração da API**
 Execute o comando a seguir no seu terminal na pasta **LPG-Dealer-API**:
+
+```bash
+# Instalar as dependências
+npm install
+```
+
 ```bash
 # Inicie a aplicação na porta 8080
 npm start
