@@ -29,7 +29,7 @@ Execute o seguinte comando no seu terminal:
 git clone https://github.com/Dudualuizio17/-LPG-Dealer-API.git
 ```
 
-**Configuração da API **
+**Configuração da API**
 Execute o comando a seguir no seu terminal na pasta **LPG-Dealer-API**:
 ```bash
 # Inicie a aplicação na porta 8080
