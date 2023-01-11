@@ -1,0 +1,87 @@
+<!--Consultar Vendas-->
+
+<core:FragmentDefinition
+	controllerName="sap.m.sample.Table.Table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.ui.table"
+	xmlns:u="sap.ui.unified">
+
+	<Table id="idProductsTable3" 
+		   rows="{modelVenda>/aVenda}" 
+		   visibleRowCount="15" 
+		   visibleRowCountMode ="Interactive"
+		   filter="filterPrice" 
+		  selectionMode = "Single">
+
+		  <extension>
+				<m:OverflowToolbar style="Clear"  >
+				<m:ToolbarSpacer/>
+				<m:Button text="Remover Filtro" press="onPressClearFilterSale" />
+					<m:VBox class="sapUiSmallMargin">
+						<m:DateRangeSelection
+							placeholder="Filtrar Data"
+							id="SaleDRS"
+							change=".changeDateSales" />
+					</m:VBox>		
+				</m:OverflowToolbar>
+		 </extension>
+
+        <columns>
+            <Column 
+				width="15%" 
+				sortProperty="sale_id">
+                <m:Label text="VENDA" />
+                <template>
+                    <m:Text text="{modelVenda>sale_id}"  />
+                </template>
+            </Column>
+
+            <Column 
+				width="20%" 
+				sortProperty="gross_amount_sl">
+                <m:Label text="TOTAL VENDA(R$)" />
+                <template>
+                    <u:Currency value="{modelVenda>gross_amount_sl}" currency="{CurrencyCode}" />
+                </template>
+            </Column>
+
+            <Column 
+				width="20%" 
+				sortProperty="creationdate_sl">
+                <m:Label text="DATA" />
+                <template>
+                    <m:Text text="{path: 'modelVenda>creationdate_sl',
+								  type: 'sap.ui.model.type.Date',
+								  formatOptions: {style: 'short'}} "  />
+                </template>
+            </Column>
+            
+            <Column 
+				width="30%" 
+				filterProperty="fullName_sl"
+				sortProperty="fullName_sl">
+                <m:Label text="CLIENTE" />
+                <template>
+                    <m:Text text="{modelVenda>fullName_sl}" />
+                </template>
+            </Column>
+
+            <Column 
+				width="10%" 
+				hAlign="Center" >
+                <m:Label text="" />
+                <template>
+                    <m:Button  text="Itens" icon="sap-icon://sales-order-item" press="onPressItemSale"/>
+                </template>
+            </Column>
+
+        </columns>
+
+        <footer>
+            <m:OverflowToolbar id="infobar" ></m:OverflowToolbar>
+        </footer>
+    </Table>
+
+</core:FragmentDefinition>

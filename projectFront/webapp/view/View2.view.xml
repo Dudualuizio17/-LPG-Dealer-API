@@ -1,0 +1,223 @@
+<mvc:View
+	controllerName="projectbetelgas.controller.View2"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core" 
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.f"
+	xmlns:u="sap.ui.unified"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<SplitApp
+		id="SplitAppDemo"
+		initialDetail="detail"
+		initialMaster="master">
+		
+		<detailPages>
+			
+            <Page
+				id="initialPage"
+				title="Betel Gás"
+				backgroundDesign= "Solid">
+			
+				<Label text ="Revendedora Autorizada"  class="sapUiSmallMargin"/>
+
+				<headerContent class="sapUiContentPadding" >
+					<Label text="Modo Escuro" class="headerHomeFont"/>		
+					<HBox>
+						<Switch change=".onPressDarkMode" id="DarkMode" state="false" >
+							<layoutData>
+								<FlexItemData growFactor="1" />
+							</layoutData>
+						</Switch>
+					</HBox>
+				</headerContent>
+		
+				<HBox height="90%" alignItems="Center" justifyContent="Center">
+
+					<Image src="/image/chama-removebg.png" width="90%"/>  
+
+				</HBox>
+			</Page>
+			
+		
+			<Page
+				id="client"
+				title="Clientes"
+				backgroundDesign= "Solid"
+                showNavButton="true"
+				navButtonPress=".onPressDetailBack">
+
+                <IconTabBar
+		                id="idIconTabBarCliente"
+		                expanded="{device>/isNoPhone}"
+		                class="sapUiResponsiveContentPadding">
+		            <items>
+			            <IconTabFilter 
+                        text="CADASTRAR CLIENTES" 
+                        key="info">
+                        
+				            <core:Fragment fragmentName="projectbetelgas.view.fragment.View3" type="XML" />
+                            
+			            </IconTabFilter>
+
+			            <IconTabFilter
+				        text="VISUALIZAR CLIENTES"
+				        key="attachments">
+
+				        <core:Fragment fragmentName="projectbetelgas.view.fragment.View4" type="XML" />
+
+			            </IconTabFilter>
+		            </items>
+	            </IconTabBar>
+			</Page>
+
+			<Page
+				id="products"
+				title="Produtos"
+				backgroundDesign= "Solid"
+				showNavButton="true"
+				navButtonPress=".onPressDetailBack">
+				
+                <IconTabBar
+		                id="idIconTabBarProduto"
+		                expanded="{device>/isNoPhone}"
+		                class="sapUiResponsiveContentPadding">
+		            <items>
+			            <IconTabFilter 
+                        text="CADASTRAR PRODUTOS" 
+                        key="info1">
+				        
+                        <core:Fragment fragmentName="projectbetelgas.view.fragment.View5" type="XML" />
+                        
+			            </IconTabFilter>
+
+			            <IconTabFilter
+				        text="VISUALIZAR PRODUTOS"
+				        key="attachments">
+				        
+                       <core:Fragment fragmentName="projectbetelgas.view.fragment.View6" type="XML" />
+
+			            </IconTabFilter>
+		            </items>
+	            </IconTabBar>
+
+			</Page>
+
+			<Page
+				id="sales"
+				title="Vendas"
+				backgroundDesign= "Solid"
+				showNavButton="true"
+				navButtonPress=".onPressDetailBack">
+				
+                <IconTabBar
+		                id="idIconTabBarVendas"
+		                expanded="{device>/isNoPhone}"
+		                class="sapUiResponsiveContentPadding">
+		            <items>
+			            <IconTabFilter 
+                        text="VENDAS" 
+                        key="info">
+
+				        <core:Fragment fragmentName="projectbetelgas.view.fragment.View7" type="XML" />
+
+			            </IconTabFilter>
+
+			            <IconTabFilter
+				        text="CONSULTAR VENDAS"
+				        key="attachments">
+				        
+						<core:Fragment fragmentName="projectbetelgas.view.fragment.View8" type="XML"/>
+						
+			            </IconTabFilter>
+		            </items>
+	            </IconTabBar>
+                
+			</Page>
+
+            <Page
+				id="cashier"
+				title="Caixa"
+				backgroundDesign= "Solid"
+                showNavButton="true"
+				navButtonPress=".onPressDetailBack">
+
+				
+				<HeaderContainer id="container1">
+					<OverflowToolbar style="Clear"  >
+						<ToolbarSpacer/>
+							<Button text="Remover Filtro" press="onPressClearFilterCashier" />
+								<VBox class="sapUiSmallMargin">
+								<DateRangeSelection
+									placeholder="Filtrar Data"
+									id="TotalDRS"
+									change=".changeDateTotal"/>
+								</VBox>		
+						</OverflowToolbar>
+				</HeaderContainer>
+
+					<l:VerticalLayout  width="50%" >
+						<l:BlockLayout id="idMainBlock">
+						<l:BlockLayoutRow accentCells="10">
+						<l:BlockLayoutCell
+							width="2"
+							titleAlignment="End"
+							title="">
+ 					
+		            <GenericTile 
+						id="totalVendas"
+						class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" width="100%"
+						header="Vendas" 
+						subheader="Quantidade" 
+						press="press">
+
+						<TileContent footer="Betel Gás">
+						<l:VerticalLayout >
+							<Label class="aumentarFonte"  text="{modelCaixa>/sVendas}"  withMargin="false"  />
+						</l:VerticalLayout>
+						</TileContent>
+						
+					</GenericTile>
+
+					<GenericTile 
+						id="caixa2"
+						class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" width="100%"
+						header="Caixa" 
+						subheader="Total" 
+						press="press">
+						
+						<TileContent footer="Betel Gás" >
+							<l:VerticalLayout >
+								<u:Currency class="aumentarFonte"  value= "{modelCaixa>/sCaixa}" />
+                			</l:VerticalLayout>
+						</TileContent>
+					
+					</GenericTile>
+					
+					</l:BlockLayoutCell>
+					</l:BlockLayoutRow>
+					</l:BlockLayout>
+					</l:VerticalLayout>
+			</Page>
+
+		</detailPages>
+		<masterPages>
+			<Page
+				id="master2"
+				title="MENU"
+				backgroundDesign="List">
+				
+				<List itemPress=".onListItemPress">
+					<items>
+                        <StandardListItem title="Home" type="Active" custom:to="initialPage" />
+						<StandardListItem title="Clientes" type="Active" custom:to="client" />
+						<StandardListItem title="Produtos" type="Active" custom:to="products" />
+						<StandardListItem title="Vendas" type="Active" custom:to="sales" />
+                        <StandardListItem title="Caixa" type="Active" custom:to="cashier" />
+					</items>
+				</List>
+			</Page>
+		</masterPages>
+	</SplitApp>
+</mvc:View>

@@ -1,0 +1,11 @@
+<!--Cadastrar Produto-->
+<core:FragmentDefinition 
+xmlns="sap.m" 
+xmlns:core="sap.ui.core" 
+xmlns:l="sap.ui.layout" 
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:f="sap.ui.layout.form">
+
+<core:Fragment fragmentName="projectbetelgas.view.fragment.editProd" visible="false" type="XML" />
+    
+</core:FragmentDefinition>

@@ -1,0 +1,14 @@
+<!-- Cadastrar clientes-->
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" 
+   xmlns:l="sap.ui.layout"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:f="sap.ui.layout.form">
+
+
+<!-- Cadastrar Clientes -->
+<core:Fragment fragmentName="projectbetelgas.view.fragment.editClient" visible="false" type="XML" /> 
+  
+  
+</core:FragmentDefinition>

@@ -1,0 +1,93 @@
+<!-- Visualizar Clientes-->
+<core:FragmentDefinition 
+	controllerName="sap.m.sample.Table.Table" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:core="sap.ui.core" 
+	xmlns:m="sap.m"
+    xmlns="sap.ui.table"
+	xmlns:u="sap.ui.unified">
+
+<Table id="idProductsTable" 
+		   rows="{modelCliente>/aCliente}" 
+		   visibleRowCount="15" 
+		   visibleRowCountMode ="Interactive"
+		   filter="filterPrice" 
+		  selectionMode = "Single">
+
+        <columns>
+            <Column 
+				width="15%" 
+                filterProperty="name_cli"
+				sortProperty="name_cli">
+                <m:Label text="NOME" />
+                <template>
+                    <m:Text text="{modelCliente>name_cli}"  />
+                </template>
+            </Column>
+
+            <Column 
+				width="15%" 
+                filterProperty="surname_cli"
+				sortProperty="surname_cli">
+                <m:Label text="SOBRENOME" />
+                <template>
+                     <m:Text text="{modelCliente>surname_cli}"/>
+                </template>
+            </Column>
+
+            <Column 
+				width="15%">
+                <m:Label text="TELEFONE" />
+                <template>
+                    <m:Text text="{modelCliente>fone1_cli}"  />
+                </template>
+            </Column>
+            
+            <Column 
+				width="15%">
+                <m:Label text="WHATSAPP" />
+                <template>
+                    <m:Text text="{modelCliente>fone2_cli}" />
+                </template>
+            </Column>
+
+            <Column 
+				width="20%">
+                <m:Label text="ENDEREÇO" />
+                <template>
+                    <m:Text text="{modelCliente>adress_cli}" />
+                </template>
+            </Column>
+
+            <Column 
+				width="10%">
+                <m:Label text="CEP" />
+                <template>
+                    <m:Text text="{modelCliente>cep_cli}" />
+                </template>
+            </Column>
+
+             <Column 
+				width="10%">
+                <m:Label text="" />
+                <template>
+                    <m:HBox>
+					   <m:items>
+						    <m:MenuButton text="Opções">
+							   
+							    <m:Menu>
+							        <m:MenuItem text="Editar" icon="sap-icon://edit" press="onPressEdit"/>
+								
+							        <m:MenuItem text="Excluir" icon="sap-icon://delete" press="onPressDelete" />
+							    </m:Menu>
+
+						    </m:MenuButton>
+						</m:items>	
+					</m:HBox>	
+                </template>
+            </Column>
+
+        </columns>
+        
+    </Table>
+</core:FragmentDefinition>

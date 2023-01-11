@@ -1,0 +1,85 @@
+<!--Visualizar Produto-->
+
+<core:FragmentDefinition
+	controllerName="sap.m.sample.Table.Table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.ui.table"
+	xmlns:u="sap.ui.unified">
+
+	<Table id="idProductsTable2" 
+		   rows="{modelProd>/aProduto}" 
+		   visibleRowCount="15" 
+		   visibleRowCountMode ="Interactive"
+		   filter="filterPrice" 
+		  selectionMode = "Single">
+
+        <columns>
+            <Column 
+				width="20%" 
+				hAlign="Left"
+				filterProperty="name_pdt"
+				sortProperty="name_pdt">
+                <m:Label text="PRODUTO" />
+                <template>
+                    <m:Text text="{modelProd>name_pdt}"  />
+                </template>
+            </Column>
+
+            <Column 
+				width="30%" 
+				filterProperty="description_pdt"
+				sortProperty="description_pdt">
+                <m:Label text="DESCRIÇÃO" />
+                <template>
+                     <m:Text text="{modelProd>description_pdt}"/>
+                </template>
+            </Column>
+
+            <Column 
+				width="10%" 
+				sortProperty="price_pdt">
+                <m:Label   text="PREÇO" />
+                <template>
+                    <u:Currency value="{modelProd>price_pdt}"/>
+                </template>
+            </Column>
+            
+            <Column 
+				width="20%" 
+				hAlign="Center"
+				sortProperty="stock_control_pdt">
+                <m:Label text="QUANTIDADE ESTOQUE" />
+                <template>
+                    <m:Text text="{modelProd>stock_control_pdt}" />
+                </template>
+            </Column>
+
+            <Column 
+				width="10%">
+				
+                <m:Label text="" />
+                <template>
+                    <m:HBox>
+					    <m:items>
+						    <m:MenuButton text="Opções">
+							   
+							    <m:Menu>
+							        <m:MenuItem text="Editar" icon="sap-icon://edit" press="onPressEditProd"/>
+								
+							        <m:MenuItem text="Excluir" icon="sap-icon://delete" press="onPressDeleteProd"/>
+							    </m:Menu>
+
+						    </m:MenuButton>
+						</m:items>	
+					</m:HBox>	
+                </template>
+            </Column>
+
+        </columns>
+
+        
+    </Table>
+
+</core:FragmentDefinition>
