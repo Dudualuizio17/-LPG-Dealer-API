@@ -44,7 +44,7 @@ http://localhost:8080/index.html
 ## Author
 
 <a href="https://www.linkedin.com/in/aluizio-antonio/">
- <img style="border-radius: 50%;" src="[https://ibb.co/2qz8ByJ](https://imageup.me/lr9)" width="100px;" alt=""/>
+ <img style="border-radius: 50%;" src="https://thumbs2.imgbox.com/57/14/VA7b2yq7_t.jpeg"  width="100px;" alt=""/>
  <br />
  <sub><b>Aluizio Junior</b></sub></a> 🚀 </a>  <br /><br />
 
