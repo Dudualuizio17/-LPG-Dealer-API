@@ -9,9 +9,9 @@
 ## Overview
 Aplicação para Gerenciamento de Clientes, Vendas, Estoque e Controle de Caixa, baseada em SAPUI5 e FIORI.
 
-**SAPUI5 Distribution** 1.102.1 (Build de 25.05.2022 11:37:00)
-**OpenUI5 Version** - 1.102.1 (Build de 25.05.2022 09:02:00)
-**Compatibility** - Fiori version 3
+- **SAPUI5 Distribution** - 1.102.1 (Build de 25.05.2022 11:37:00)
+- **OpenUI5 Version** - 1.102.1 (Build de 25.05.2022 09:02:00)
+- **Compatibility** - Fiori version 3
 
 ## Como Utilizar
 
