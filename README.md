@@ -28,9 +28,9 @@ Execute o seguinte comando no seu terminal:
 # Download da aplicação diretamento do repositório
 git clone https://github.com/Dudualuizio17/-LPG-Dealer-API.git
 ```
-Iniciar o APACHE
-Abrir o PHPmyadmin criar o banco de dados ***beteldb***
-Importar o arquivo beteldb.sql na pasta **Assets**
+- Iniciar o APACHE.
+- Abrir o PHPmyadmin criar o banco de dados ***beteldb***.
+- Importar o arquivo beteldb.sql na pasta **Assets**.
 
 **Configuração da API**
 
