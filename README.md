@@ -25,7 +25,7 @@ Aplicação para Gerenciamento de Clientes, Vendas, Estoque e Controle de Caixa,
 
 Execute o seguinte comando no seu terminal:
 ```bash
-# Download da aplicação diretamento do repositório
+# Download da aplicação diretamente do repositório
 git clone https://github.com/Dudualuizio17/-LPG-Dealer-API.git
 ```
 - Iniciar o APACHE.
