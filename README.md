@@ -34,7 +34,7 @@ git clone https://github.com/Dudualuizio17/-LPG-Dealer-API.git
 
 **Configuração da API**
 
-Execute o comando a seguir no seu terminal na pasta **LPG-Dealer-API**:
+Execute os comandos a seguir no seu terminal na pasta **LPG-Dealer-API**:
 
 ```bash
 # Instalar as dependências
