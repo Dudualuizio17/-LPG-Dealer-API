@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="#">
-    <img src="https://thumbs2.imgbox.com/57/42/eth7ugiJ_t.png" width="234" height="163" alt="" />
+    <img src="https://thumbs2.imgbox.com/d4/68/zpJ1KNEM_t.png"  width="234" height="163" alt="" />
   </a>
 </p>
 
